@@ -10,4 +10,38 @@ block append script
 
 block content
   main.main
-    h1 Hello World
+    form(action="" method="get").js-search-form
+      input(type="search" name="k" placeholder="キーワードを入力してください" value="リサイクル")
+      ul
+        li
+          input(type="checkbox" name="type" value="medicine")#medicine
+          lab(for="medicine") 医薬品
+        li
+          input(type="checkbox" name="type" value="medical")#medical
+          label(for="medical") メディカル
+        li
+          input(type="checkbox" name="type" value="cosmetic")#cosmetic
+          label(for="cosmetic") 化粧品
+        li
+          input(type="checkbox" name="type" value="foods")#foods
+          label(for="foods") 食品
+        li
+          input(type="checkbox" name="type" value="life")#life
+          label(for="life") トイレタリー
+      ul
+        li
+          input(type="checkbox" name="quality" value="capsule")#capsule
+          lab(for="capsule") 錠剤・カプセル
+        li
+          input(type="checkbox" name="quality" value="powder")#powder
+          label(for="powder") 散剤・顆粒・粉末
+        li
+          input(type="checkbox" name="quality" value="liquid")#liquid
+          label(for="liquid") 液体
+        li
+          input(type="checkbox" name="quality" value="cream")#cream
+          label(for="cream") 粘体・クリーム
+        li
+          input(type="checkbox" name="quality" value="other")#other
+          label(for="other") その他
+      button(type="submit") 検索
