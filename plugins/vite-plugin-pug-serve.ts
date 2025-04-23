@@ -30,7 +30,11 @@ export const vitePluginPugServe = (): Plugin => {
     configureServer(server) {
       server.middlewares.use(async (req, res, next) => {
         const root = server.config.root
-        let fullReqPath = root + req.url
+
+        // クエリやハッシュを除去した pathname を取得
+        const url = new URL(req.url || '/', 'http://localhost')
+        let pathname = url.pathname
+        let fullReqPath = root + pathname
 
         if (fullReqPath.endsWith('/')) {
           fullReqPath += 'index.html'
