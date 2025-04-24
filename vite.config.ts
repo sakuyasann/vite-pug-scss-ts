@@ -21,7 +21,7 @@ export default defineConfig({
         assetFileNames: (assetInfo) => {
           const { name } = assetInfo
 
-          if (/\.(jpe?g|png|gif|svg)$/.test(name ?? '')) {
+          if (/\.(jpe?g|png|gif|svg|webp|avif)$/.test(name ?? '')) {
             return 'assets/img/[name][extname]'
           }
           if (/\.(woff?2|ttf|otf)$/.test(name ?? '')) {
