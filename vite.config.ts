@@ -8,6 +8,7 @@ const htmlFiles = globule.find('src/**/*.pug', {
 })
 
 export default defineConfig({
+  base: './',
   root: 'src',
   build: {
     outDir: resolve(__dirname, 'dist'),
