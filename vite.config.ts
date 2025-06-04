@@ -7,6 +7,9 @@ const htmlFiles = globule.find('src/**/*.pug', {
   ignore: ['src/**/_*.pug'],
 })
 
+// `pnpm build` で出力されない画像を対策
+const usedImages = []
+
 export default defineConfig({
   base: './',
   root: 'src',
@@ -14,7 +17,17 @@ export default defineConfig({
     outDir: resolve(__dirname, 'dist'),
     emptyOutDir: true,
     rollupOptions: {
-      input: htmlFiles,
+      input: {
+        ...htmlFiles.reduce((acc, file) => {
+          acc[file] = file
+          return acc
+        }, {}),
+        // 使用する画像ファイルのみをエントリーポイントとして追加
+        ...usedImages.reduce((acc, file) => {
+          acc[file] = file
+          return acc
+        }, {}),
+      },
       output: {
         entryFileNames: `assets/js/bundle.js`,
         chunkFileNames: `assets/js/[name].js`,
@@ -34,6 +47,8 @@ export default defineConfig({
         },
       },
     },
+    assetsDir: './', // ビルドされたファイルを相対パスにするための設定
+    assetsInlineLimit: 0, // 全てのアセットを相対パスで出力するための設定
   },
   resolve: {
     alias: {
