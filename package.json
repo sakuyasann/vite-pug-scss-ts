@@ -13,7 +13,7 @@
     "@types/pug": "^2.0.10",
     "globule": "^1.3.4",
     "typescript": "^5.5.4",
-    "vite": "^5.3.4"
+    "vite": "^6.0.0"
   },
   "dependencies": {
     "destyle.css": "^4.0.1",
