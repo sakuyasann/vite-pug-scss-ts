@@ -19,7 +19,7 @@ importers:
         version: 1.1.0(pug@3.0.3)
       sass:
         specifier: ^1.77.8
-        version: 1.89.1
+        version: 1.89.2
     devDependencies:
       '@types/node':
         specifier: ^22.0.0
@@ -35,7 +35,7 @@ importers:
         version: 5.8.3
       vite:
         specifier: ^6.0.0
-        version: 6.3.5(@types/node@22.15.29)(sass@1.89.1)
+        version: 6.3.5(@types/node@22.15.29)(sass@1.89.2)
 
 packages:
 
@@ -699,8 +699,8 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  sass@1.89.1:
-    resolution: {integrity: sha512-eMLLkl+qz7tx/0cJ9wI+w09GQ2zodTkcE/aVfywwdlRcI3EO19xGnbmJwg/JMIm+5MxVJ6outddLZ4Von4E++Q==}
+  sass@1.89.2:
+    resolution: {integrity: sha512-xCmtksBKd/jdJ9Bt9p7nPKiuqrlBMBuuGkQlkhZjjQk3Ty48lv93k5Dq6OPkKt4XwxDJ7tvlfrTa1MPA9bf+QA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -1371,7 +1371,7 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.41.1
       fsevents: 2.3.3
 
-  sass@1.89.1:
+  sass@1.89.2:
     dependencies:
       chokidar: 4.0.3
       immutable: 5.1.2
@@ -1399,7 +1399,7 @@ snapshots:
 
   undici-types@6.21.0: {}
 
-  vite@6.3.5(@types/node@22.15.29)(sass@1.89.1):
+  vite@6.3.5(@types/node@22.15.29)(sass@1.89.2):
     dependencies:
       esbuild: 0.25.5
       fdir: 6.4.5(picomatch@4.0.2)
@@ -1410,7 +1410,7 @@ snapshots:
     optionalDependencies:
       '@types/node': 22.15.29
       fsevents: 2.3.3
-      sass: 1.89.1
+      sass: 1.89.2
 
   void-elements@3.1.0: {}
 
